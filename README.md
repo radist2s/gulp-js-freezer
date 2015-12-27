@@ -4,7 +4,7 @@
 
 ## What it does
 
-###### Source CSS files
+###### Source JS files
 
 ```
 app-script.js
@@ -33,7 +33,7 @@ js-freeze-map.json
 Install with [npm](https://www.npmjs.com/)
 
 ```sh
-$ npm i gulp-css-freezer --save-dev
+$ npm i gulp-js-freezer --save-dev
 ```
 
 ## Usage
