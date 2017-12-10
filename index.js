@@ -1,4 +1,3 @@
-var util = require('util')
 var gutil = require('gulp-util')
 var Vinyl = require('vinyl')
 var ResourceFreezer = require('static-resources-freezer')
