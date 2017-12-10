@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "gulp-util": ">=3",
-    "static-resources-freezer": "^0.0.6"
+    "static-resources-freezer": "^0.0.7"
   },
   "author": "Alex Batalov",
   "license": "MIT",
