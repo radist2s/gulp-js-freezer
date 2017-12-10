@@ -1,6 +1,6 @@
 {
   "name": "gulp-js-freezer",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "JS resources freezer. The best use for cache invalidation.",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,8 @@
   ],
   "dependencies": {
     "gulp-util": ">=3",
-    "static-resources-freezer": "^0.0.7"
+    "static-resources-freezer": "^0.0.7",
+    "vinyl": "^2.1.0"
   },
   "author": "Alex Batalov",
   "license": "MIT",

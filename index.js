@@ -1,5 +1,6 @@
 var util = require('util')
 var gutil = require('gulp-util')
+var Vinyl = require('vinyl')
 var ResourceFreezer = require('static-resources-freezer')
 
 const PLUGIN_NAME = 'gulp-js-freezer'
@@ -22,9 +23,9 @@ function pipeMainTransform(resourceFreezer, stream, sourceFile) {
         // Create JS freeze path
         var jsFilePath = resourceFreezer.createFileSubDirPath(resourceFreezer.createFileName(sourceFile))
 
-        destFile = new gutil.File({
+        destFile = new Vinyl({
             path: jsFilePath,
-            base: '',
+            base: '.',
             cwd: '',
             contents: new Buffer(js)
         })
@@ -39,9 +40,9 @@ function pipeMainTransform(resourceFreezer, stream, sourceFile) {
 }
 
 function gulpJSFreezer(options) {
-    var config = {freezeMapFileName: 'js-freeze-map.json'}
+    var config = Object.assign({freezeMapFileName: 'js-freeze-map.json'}, options)
 
-    var resourceFreezer = new ResourceFreezer(util._extend(config, options))
+    var resourceFreezer = new ResourceFreezer(config)
 
     return resourceFreezer.stream(pipeMainTransform.bind(undefined, resourceFreezer))
 }
